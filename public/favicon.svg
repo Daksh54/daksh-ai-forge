@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="44" y1="34" x2="456" y2="478" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220" />
+      <stop offset="1" stop-color="#101A2D" />
+    </linearGradient>
+    <linearGradient id="ring" x1="88" y1="70" x2="420" y2="426" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#66F6FF" />
+      <stop offset="1" stop-color="#22CFF4" />
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="22" y="22" width="468" height="468" rx="132" fill="url(#bg)" />
+  <rect x="34" y="34" width="444" height="444" rx="120" stroke="url(#ring)" stroke-opacity="0.35" stroke-width="3" />
+  <circle cx="400" cy="114" r="20" fill="#4DEFFF" fill-opacity="0.95" filter="url(#softGlow)" />
+  <path d="M116 378C116 324.098 116 297.147 132.745 280.402C149.49 263.657 176.441 263.657 230.343 263.657H252.977C285.585 263.657 301.889 263.657 314.659 268.878C341.552 279.877 362.952 301.277 373.951 328.17C379.172 340.94 379.172 357.244 379.172 389.852V389.852" stroke="url(#ring)" stroke-width="18" stroke-linecap="round" />
+  <path d="M163 164.5H232.5C276.959 164.5 313 200.541 313 245V245C313 289.459 276.959 325.5 232.5 325.5H163V164.5Z" stroke="url(#ring)" stroke-width="18" />
+  <text x="258" y="294" text-anchor="middle" fill="#ECF7FF" font-size="188" font-weight="700" style="font-family:'Cormorant Garamond', serif; letter-spacing:-8px;">
+    DS
+  </text>
+</svg>

@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 223 35% 8%;
+    --foreground: 210 33% 96%;
+
+    --card: 222 29% 11%;
+    --card-foreground: 210 33% 96%;
+
+    --popover: 222 29% 11%;
+    --popover-foreground: 210 33% 96%;
+
+    --primary: 184 100% 56%;
+    --primary-foreground: 223 35% 8%;
+
+    --secondary: 223 24% 15%;
+    --secondary-foreground: 210 33% 96%;
+
+    --muted: 223 19% 15%;
+    --muted-foreground: 215 17% 68%;
+
+    --accent: 223 22% 18%;
+    --accent-foreground: 210 33% 96%;
+
+    --destructive: 0 72% 54%;
+    --destructive-foreground: 40 40% 98%;
+
+    --border: 222 20% 22%;
+    --input: 222 20% 22%;
+    --ring: 184 100% 56%;
+
+    --radius: 1.25rem;
+  }
+
+  .dark {
+    --background: 223 35% 8%;
+    --foreground: 210 33% 96%;
+    --card: 222 29% 11%;
+    --card-foreground: 210 33% 96%;
+    --popover: 222 29% 11%;
+    --popover-foreground: 210 33% 96%;
+    --primary: 184 100% 56%;
+    --primary-foreground: 223 35% 8%;
+    --secondary: 223 24% 15%;
+    --secondary-foreground: 210 33% 96%;
+    --muted: 223 19% 15%;
+    --muted-foreground: 215 17% 68%;
+    --accent: 223 22% 18%;
+    --accent-foreground: 210 33% 96%;
+    --destructive: 0 72% 54%;
+    --destructive-foreground: 40 40% 98%;
+    --border: 222 20% 22%;
+    --input: 222 20% 22%;
+    --ring: 184 100% 56%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.16);
+    color: hsl(var(--foreground));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Manrope", sans-serif;
+    background-image:
+      radial-gradient(circle at 12% 8%, rgba(102, 246, 255, 0.16), transparent 22%),
+      radial-gradient(circle at 88% 18%, rgba(18, 132, 175, 0.14), transparent 20%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-position: center;
+    background-size: 36px 36px;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: -0.04em;
+  }
+
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      background-color 180ms ease,
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  select {
+    color-scheme: dark;
+  }
+
+  select option,
+  select optgroup {
+    background-color: hsl(var(--card));
+    color: hsl(var(--foreground));
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(6, 11, 20, 0.8);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(102, 246, 255, 0.18);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(102, 246, 255, 0.3);
+  }
+}
+
+@layer components {
+  .surface-panel {
+    background:
+      linear-gradient(180deg, rgba(18, 25, 39, 0.88), rgba(11, 18, 30, 0.82)),
+      linear-gradient(120deg, rgba(102, 246, 255, 0.06), transparent 35%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+      0 24px 90px -52px rgba(0, 0, 0, 0.8),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    @apply rounded-[32px] backdrop-blur-xl;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    @apply text-[11px] font-medium uppercase tracking-[0.32em] text-primary;
+  }
+
+  .site-shell {
+    width: min(96vw, 1720px);
+    margin-inline: auto;
+  }
+
+  .page-shell {
+    width: min(96vw, 1720px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .font-hero {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-display {
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .font-label {
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .spotlight-ring {
+    position: absolute;
+    inset: auto auto -10% -5%;
+    height: 260px;
+    width: 260px;
+    border-radius: 9999px;
+    background: radial-gradient(circle, rgba(102, 246, 255, 0.18), transparent 70%);
+    filter: blur(14px);
+    animation: orbit-glow 10s ease-in-out infinite;
+  }
+
+  .custom-cursor-ring,
+  .custom-cursor-dot {
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 90;
+    translate: -50% -50%;
+    border-radius: 9999px;
+  }
+
+  .custom-cursor-ring {
+    height: 34px;
+    width: 34px;
+    border: 1px solid rgba(102, 246, 255, 0.7);
+    background:
+      radial-gradient(circle, rgba(102, 246, 255, 0.14), transparent 68%);
+    box-shadow:
+      0 0 28px -10px rgba(102, 246, 255, 0.55),
+      inset 0 0 12px rgba(102, 246, 255, 0.12);
+    mix-blend-mode: screen;
+  }
+
+  .custom-cursor-dot {
+    height: 8px;
+    width: 8px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 20px -6px hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html.has-custom-cursor,
+html.has-custom-cursor body,
+html.has-custom-cursor a,
+html.has-custom-cursor button,
+html.has-custom-cursor input,
+html.has-custom-cursor textarea,
+html.has-custom-cursor select,
+html.has-custom-cursor [role="button"] {
+  cursor: none !important;
+}
+
+@keyframes orbit-glow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(24px, -18px, 0) scale(1.12);
+  }
+}
