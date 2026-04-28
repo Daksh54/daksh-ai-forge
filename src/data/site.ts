@@ -74,7 +74,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/daksh-sharma02326b/",
   github: "https://github.com/Daksh54",
   portfolio: "https://dakshsharma5454871.online/",
-  resume: "https://drive.google.com/file/d/1luaLP95yPDyrIREpdGdguLCmKyVv67O8/view?usp=drive_link",
+  resume: "https://drive.google.com/file/d/1OKZC_aOFcrew6PvHFf3AYHTW5Tz8Qmoj/view?usp=drive_link",
   photo: "https://i.postimg.cc/CKBSjK5M/linkdein-profile-photo-for-me.png",
   shortBio:
     "Software engineer with strong MERN fundamentals and a growing focus on AI-driven products, scalable APIs, and real-time systems.",
