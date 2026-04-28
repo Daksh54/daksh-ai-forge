@@ -72,7 +72,7 @@ const Hero = () => {
               </Button>
               <Button size="lg" variant="ghost" className="hover:bg-accent/10 hover:text-accent" asChild>
                 <a
-                  href="https://drive.google.com/file/d/1luaLP95yPDyrIREpdGdguLCmKyVv67O8/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1OKZC_aOFcrew6PvHFf3AYHTW5Tz8Qmoj/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
