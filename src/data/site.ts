@@ -71,7 +71,7 @@ export const profile = {
   location: "Gurgaon, India",
   email: "dakshsharma5454871@gmail.com",
   phone: "+91 9310754550",
-  linkedin: "https://www.linkedin.com/in/daksh-sharma54/
+  linkedin: "https://www.linkedin.com/in/daksh-sharma54/",
   github: "https://github.com/Daksh54",
   portfolio: "https://dakshsharma5454871.online/",
   resume: "https://drive.google.com/file/d/1OKZC_aOFcrew6PvHFf3AYHTW5Tz8Qmoj/view?usp=drive_link",
